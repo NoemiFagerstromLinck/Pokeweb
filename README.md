@@ -1,5 +1,7 @@
 # Pokeguía (Sólo Vuetify)
 
+_Trigger redeploy: 2025-11-22_
+
 Aplicación Vue 3 enfocada exclusivamente en una Pokeguía usando Vuetify como única librería de UI. Se han eliminado por completo las implementaciones anteriores de Bootstrap, Buefy y Element Plus para simplificar mantenimiento y peso del proyecto.
 
 ## Objetivo
