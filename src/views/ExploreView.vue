@@ -1,16 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <v-app>
-    <v-app-bar color="teal-darken-2" dark app>
-      <v-toolbar-title class="d-flex align-center">
-        <v-icon left>mdi-grid</v-icon>
-        Explorar Pokémon
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn to="/" variant="outlined" color="yellow">
-        <v-icon left>mdi-arrow-left</v-icon> Volver
-      </v-btn>
-=======
   <v-app class="pixel-font">
     <v-app-bar class="gba-app-bar" flat>
       <v-toolbar-title class="d-flex align-center gba-title">
@@ -18,11 +6,12 @@
         <span class="gba-title-text gba-title-pixel">Explorar Pokémon</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn to="/" variant="outlined" color="yellow" class="pixel-font"><v-icon left>mdi-arrow-left</v-icon> Volver</v-btn>
->>>>>>> b3fc6f7 (init: proyecto limpio para deploy)
+      <v-btn to="/" variant="outlined" color="yellow" class="pixel-font">
+        <v-icon left>mdi-arrow-left</v-icon> Volver
+      </v-btn>
     </v-app-bar>
     <v-main>
-      <v-container fluid class="py-6">
+      <v-container fluid>
         <v-row>
           <v-col 
             v-for="p in displayedPokemon" 
@@ -39,11 +28,7 @@
               @click="goToDetail(p.name)"
             >
               <v-img 
-<<<<<<< HEAD
-                :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`"
-=======
                 :src="`/images/pokemon-${p.id}.png`"
->>>>>>> b3fc6f7 (init: proyecto limpio para deploy)
                 :alt="p.name"
                 height="120"
                 cover
@@ -103,7 +88,6 @@ export default {
     loadMore() {
       if (this.loading) return
       if (this.displayedPokemon.length >= this.totalPokemon) return
-      
       this.loading = true
       setTimeout(() => {
         const start = this.page * this.pageSize
@@ -118,7 +102,6 @@ export default {
       const scrollTop = window.scrollY || document.documentElement.scrollTop
       const windowHeight = window.innerHeight
       const docHeight = document.documentElement.scrollHeight
-      
       if (scrollTop + windowHeight >= docHeight - 200) {
         this.loadMore()
       }
@@ -131,8 +114,6 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-=======
 .pixel-font, .gba-title-text, .gba-title-pixel, .v-btn, .v-card-title, .v-card-text, .v-chip, .v-toolbar-title, .text-caption, .text-subtitle-1, .text-subtitle-2, .text-h5, .text-h6, .text-h4, .text-h3, .text-h2, .text-h1 {
   font-family: 'Press Start 2P', monospace !important;
   letter-spacing: 0.5px;
@@ -150,7 +131,6 @@ body::before, .v-application::before {
   background: repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 8px);
   z-index: 0;
 }
->>>>>>> b3fc6f7 (init: proyecto limpio para deploy)
 .explore-card {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
