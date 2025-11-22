@@ -2,9 +2,9 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  // Base path for GitHub Pages deployment of Pokeweb
-  // Example: https://NoemiFagerstromLinck.github.io/Pokeweb/
-  base: '/Pokeweb/',
+  // Base path for GitHub Pages deployment of pokeweb
+  // Example: https://NoemiFagerstromLinck.github.io/pokeweb/
+  base: '/pokeweb/',
   plugins: [vue()],
   resolve: {
     alias: {
