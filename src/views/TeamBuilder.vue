@@ -97,18 +97,15 @@ export default {
     async function handleAdd() {
       const raw = addInput.value.trim().toLowerCase()
       if (!raw) return
-      // si es id numérico, convertir a número
       const idOrName = isNaN(Number(raw)) ? raw : Number(raw)
       if (store.teamCount >= 6) return
       try {
-        // validar existencia rápida
         const { data } = await fetch(`https://pokeapi.co/api/v2/pokemon/${encodeURIComponent(idOrName)}`)
         if (!data) return
         const json = await data.json()
         store.addToTeam(json.id)
         addInput.value = ''
       } catch (_) {
-        // ignorar errores de fetch
       }
     }
     function remove(id) { store.removeFromTeam(id) }
